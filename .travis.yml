@@ -1,7 +1,11 @@
 language: cpp
-compiler: g++
-install: make
-script: ./build.sh && ./build/Hello
+
+compiler: gcc
+
+script:
+- ./build.sh
+- ./build/Hello
+
 after_failure:
 - cmake --version
 - gcc --version
