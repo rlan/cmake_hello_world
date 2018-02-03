@@ -1,6 +1,6 @@
 language: cpp
 compiler: g++
-install: make get-deps
+install: make
 script: ./build.sh && ./build/Hello
 after_failure:
 - cmake --version
