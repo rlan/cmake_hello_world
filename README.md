@@ -1,4 +1,4 @@
-cmake Hello world
+cmake Hello world [![Build Status](https://travis-ci.org/rlan/cmake_hello_world.svg?branch=master)](https://travis-ci.org/rlan/cmake_hello_world)
 ============
 
 This package is a cmake starter project template.
