@@ -1,0 +1,22 @@
+language: cpp
+compiler: g++
+cache:
+  apt: true
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - cmake
+    - gcc-4.8
+    - g++-4.8
+install:
+- make
+- if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
+before_script:
+script: ./build.sh && ./build/Hello
+after_failure:
+- cmake --version
+- gcc --version
+- g++ --version
+- cat ./build.sh
